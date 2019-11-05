@@ -2,8 +2,9 @@
 using Microsoft.Extensions.Caching.Memory;
 using NNNLogger.Helpers;
 using System.Collections.Generic;
-using NNNDataModel.Log;
+using NNNDataModel.Logger;
 using NNNDataModel.Helpers;
+using System;
 
 namespace NNNLogger
 {
@@ -60,6 +61,7 @@ namespace NNNLogger
             {
                 Username = _username,
                 TraceId = _userTraceId,
+                CreatedTime = DateTime.UtcNow,
                 Source = _source,
                 LocalIPAddress = _localIpAddress,
                 RemoteIPAddress = _remoteIpAddress,

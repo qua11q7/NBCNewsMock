@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20191104235415_ChangeIdentityColumn.cs" />
+    <Compile Remove="Migrations\20191104235415_ChangeIdentityColumn.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NNNDataModel\NNNDataModel.csproj" />
   </ItemGroup>
 

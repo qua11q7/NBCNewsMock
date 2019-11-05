@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using NNNDataModel.Log;
+using NNNDataModel.Logger;
 using NNNLogger.Helpers;
 using NNNDataModel.Helpers;
 

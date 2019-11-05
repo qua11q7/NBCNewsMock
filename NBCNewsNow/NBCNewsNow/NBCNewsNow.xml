@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NBCNewsNow</name>
+    </assembly>
+    <members>
+        <member name="M:NBCNewsNow.Controllers.NewsController.GetNews(System.Int32,System.Int32,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Boolean)">
+            <summary>
+            Returns a list of news stored in the database according to given query.
+            </summary>
+            <param name="skip">Number of news to skip</param>
+            <param name="take">Number of news to return</param>
+            <param name="query">A text that will be searched in the title</param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <param name="descending"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

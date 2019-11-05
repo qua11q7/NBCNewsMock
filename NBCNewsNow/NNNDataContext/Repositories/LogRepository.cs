@@ -1,5 +1,5 @@
 ﻿using NNNDataContext.Context;
-using NNNDataModel.Log;
+using NNNDataModel.Logger;
 using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NNNDataModel;
-using NNNDataModel.Log;
+using NNNDataModel.Logger;
 using System;
 using System.Collections.Generic;
 using System.Text;

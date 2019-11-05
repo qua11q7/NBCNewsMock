@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using NBCNewsNow.DataModel;
 using NBCNewsNow.Filters;
 using NBCNewsNow.Middlewares;
 using NBCNewsNow.Services;
@@ -37,6 +38,9 @@ namespace NBCNewsNow
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            var settingsSection = Configuration.GetSection("Settings");
+            services.Configure<Settings>(settingsSection);
+
             // Database
             services.AddDbContext<NewsContext>(optionsBuilder => optionsBuilder.UseSqlServer(Configuration.GetConnectionString(DbConstants.ConnectionStringName)));
             services.AddScoped<INewsRepository, NewsRepository>();
@@ -48,6 +52,7 @@ namespace NBCNewsNow
 
             // Services
             services.AddSingleton<ILogWorker, LogWorkerService>();
+            services.AddScoped<INewsObtainerService, NewsObtainerService>();
 
             // Filters
             services.AddScoped<ResponseFilter>();

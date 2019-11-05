@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using NNNDataModel.Helpers;
-using NNNDataModel.Log;
+using NNNDataModel.Logger;
 using NNNLogger.Helpers;
 
 namespace NNNLogger
@@ -48,6 +48,7 @@ namespace NNNLogger
             {
                 Username = _username,
                 TraceId = _userTraceId,
+                CreatedTime = DateTime.UtcNow,
                 LocalIPAddress = _localIpAddress,
                 RemoteIPAddress = _remoteIpAddress,
                 Source = _categoryName,

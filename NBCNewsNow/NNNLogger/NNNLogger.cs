@@ -1,4 +1,4 @@
-﻿using NNNDataModel.Log;
+﻿using NNNDataModel.Logger;
 using System.Diagnostics;
 using System;
 using System.Collections.Generic;

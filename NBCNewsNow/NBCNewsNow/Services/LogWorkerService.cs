@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NNNDataContext.Repositories;
-using NNNDataModel.Log;
+using NNNDataModel.Logger;
 using NNNLogger;
 using System;
 using System.Collections.Generic;
