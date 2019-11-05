@@ -14,7 +14,8 @@ jobs:
         HEROKU_API_KEY: ${{ 'd978bb76-25ad-4177-a491-22ac67a5e6ca' }}
         APP_NAME: ${{ 'nbc-news-now' }}
       run: |
-        cd ./ASPNetCoreLabs/HerokuContainer
-        docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
-        heroku container:push web -a $APP_NAME
-        heroku container:release web -a $APP_NAME
+         docker login --username=$HEROKU_USERNAME --password=$HEROKU_API_KEY registry.heroku.com
+         docker tag NBCNewsNow registry.heroku.com/$HEROKU_APP_NAME/web
+         docker push registry.heroku.com/$HEROKU_APP_NAME/web                
+         curl https://cli-assets.heroku.com/install.sh | sh
+         heroku container:release web -a $HEROKU_APP_NAME
