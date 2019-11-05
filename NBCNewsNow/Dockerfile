@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:2.1 AS build
 WORKDIR /src
 EXPOSE 80
 EXPOSE 443
-COPY *.sln .
+COPY NBCNewsNow.sln .
 COPY NBCNewsNow/*.csproj NBCNewsNow/
 COPY NNNDataContext/*.csproj NNNDataContext/
 COPY NNNDataModel/*.csproj NNNDataModel/
