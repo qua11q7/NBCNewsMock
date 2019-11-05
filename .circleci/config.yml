@@ -5,6 +5,7 @@ jobs:
    steps:
      - checkout 
 
+     
      # build image
      - run: |         
          docker info
