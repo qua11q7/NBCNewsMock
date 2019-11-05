@@ -57,6 +57,7 @@ namespace NBCNewsNow.Controllers
             if (news.IsNullOrEmpty())
             { 
                 result.SuccessMessage = "No news have been found.";
+                _logger.Log(LogPriority.Warning, "No news have been found.");
             }
             else
             {
