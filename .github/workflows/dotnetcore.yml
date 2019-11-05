@@ -13,7 +13,7 @@ jobs:
       env: 
         HEROKU_USERNAME: ${{ 'yo.yasinozturk@gmail.com' }}
         HEROKU_API_KEY: ${{ 'd978bb76-25ad-4177-a491-22ac67a5e6ca' }}
-        APP_NAME: ${{ 'nbc-news-now' }}
+        HEROKU_APP_NAME: ${{ 'nbc-news-now' }}
       run: |
          docker login --username=$HEROKU_USERNAME --password=$HEROKU_API_KEY registry.heroku.com
          docker tag nbc-news-now registry.heroku.com/$HEROKU_APP_NAME/web
