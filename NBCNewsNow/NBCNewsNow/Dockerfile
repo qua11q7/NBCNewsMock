@@ -5,10 +5,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.1-stretch AS build
 WORKDIR /src
-COPY ["NBCNewsNow/NBCNewsNow.csproj", "NBCNewsNow/"]
-COPY ["NNNDataContext/NNNDataContext.csproj", "NNNDataContext/"]
-COPY ["NNNDataModel/NNNDataModel.csproj", "NNNDataModel/"]
-COPY ["NNNLogger/NNNLogger.csproj", "NNNLogger/"]
+COPY ["../NBCNewsNow/NBCNewsNow.csproj", "NBCNewsNow/"]
+COPY ["../NNNDataContext/NNNDataContext.csproj", "NNNDataContext/"]
+COPY ["../NNNDataModel/NNNDataModel.csproj", "NNNDataModel/"]
+COPY ["../NNNLogger/NNNLogger.csproj", "NNNLogger/"]
 RUN dotnet restore "NBCNewsNow/NBCNewsNow.csproj"
 COPY . .
 WORKDIR "/src/NBCNewsNow"
