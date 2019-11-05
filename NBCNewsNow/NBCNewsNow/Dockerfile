@@ -13,7 +13,6 @@ RUN dotnet restore "NBCNewsNow/NBCNewsNow.csproj"
 COPY . .
 WORKDIR "/src/NBCNewsNow"
 RUN dotnet build "NBCNewsNow.csproj" -c Release -o /app/build
-RUN dotnet update-database
 
 FROM build AS publish
 RUN dotnet publish "NBCNewsNow.csproj" -c Release -o /app/publish
