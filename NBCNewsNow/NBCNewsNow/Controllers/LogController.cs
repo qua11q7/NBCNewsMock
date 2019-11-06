@@ -78,7 +78,6 @@ namespace NBCNewsNow.Controllers
         [ProducesResponseType(204)]
         public async Task<IActionResult> GetInfoLogs([FromQuery] int skip = 0, [FromQuery] int take = 100, [FromQuery] bool descending = true)
         {
-            var result = HttpContext.Items["result"] as ResponseModel;
             if (take > 1000)
                 take = 1000;
 
@@ -99,8 +98,6 @@ namespace NBCNewsNow.Controllers
         [ProducesResponseType(400)]
         public async Task<IActionResult> GetTraceInfo(string traceId, [FromQuery] bool descending = true)
         {
-            var result = HttpContext.Items["result"] as ResponseModel;
-
             if (traceId.IsNullOrEmpty())
             {
                 return BadRequest("traceId cannot be null or empty.");
@@ -112,7 +109,7 @@ namespace NBCNewsNow.Controllers
                 return NoContent();
             }
             else
-            {result.SuccessMessage = $"{logs.Count} log{(logs.Count > 1 ? "s" : "")} found.";
+            {
                 return Ok(CreateMessage(logs, descending));
             }
         }
